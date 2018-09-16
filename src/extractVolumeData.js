@@ -1,4 +1,4 @@
-const getVolumeData = async ( audioData, width, arcRadius ) => {
+const getVolumeData = async ( audioData ) => {
   let audioCtx = new ( window.AudioContext || window.webkitAudioContext )();
 
   const decodedAudioData = await audioCtx.decodeAudioData( audioData );
