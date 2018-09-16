@@ -4,6 +4,9 @@ Inspired by the podcast player by [Megaphone](https://megaphone.fm/).
 
 ![Example waveform](./squiggl.png?raw=true "Example")
 
+## Demo
+[https://codepen.io/aprct/full/JaaRqX/](https://codepen.io/aprct/full/JaaRqX/)
+
 ## Installation
 
 Via `<script>` tag (example):
