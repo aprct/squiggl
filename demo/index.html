@@ -1,0 +1,143 @@
+<html>
+<head>
+  <style>
+    #waveform-container {
+      margin-top: 1rem;
+      width: 100%;
+      height: 60px;
+      background-color: #232831;
+    }
+
+    #squiggl {
+
+    }
+  </style>
+</head>
+<body>
+  <input id="audio_file" type="file" accept="audio/*" />
+
+  <div id="waveform-container"></div>
+
+  <script src="index.js"></script>
+  <script>
+    /**
+     * Demo code
+     */
+
+    document.querySelector( 'input' ).onchange = function() {
+      var fileReader = new FileReader;
+      fileReader.onload = function() {
+         var arrayBuffer = this.result;
+
+         squigglify( arrayBuffer );
+      }
+      fileReader.readAsArrayBuffer( this.files[0] );
+    };
+
+    /**
+     * squiggl code
+     */
+
+    var container = document.querySelector( '#waveform-container' );
+    var getOptions = function() {
+      return {
+        svg: {
+          id: 'squiggl',
+          width: container.offsetWidth,
+          height: 60
+        },
+        path: {
+          arcRadius: 2.25,
+          stroke: '#eaeaef',
+          strokeWidth: 1.2
+        }
+      };
+    };
+
+    var volumeData = [];
+
+    var squigglify = function( arrayBuffer ) {
+      var options = getOptions();
+
+      squiggl.extractVolumeData( arrayBuffer, options.svg.width, options.path.arcRadius )
+        .then( function( data ) {
+          volumeData = data;
+          renderSquiggl();
+        });
+    }
+
+    var renderSquiggl = function() {
+      var options = getOptions();
+      var formattedVolumeData = squiggl.formatVolumeData( volumeData, options.svg.width, options.path.arcRadius );
+      var el = squiggl.createElement( formattedVolumeData, options );
+
+      if( container.childNodes.length > 0 ) {
+        container.removeChild( container.childNodes[ 0 ] );
+      }
+      container.appendChild( el );
+    };
+
+    /**
+     * Responsive code
+     */
+
+    var optimizedResize = (function() {
+
+      var callbacks = [],
+      running = false;
+
+      // fired on resize event
+      function resize() {
+
+        if (!running) {
+          running = true;
+
+          if (window.requestAnimationFrame) {
+            window.requestAnimationFrame(runCallbacks);
+          } else {
+            setTimeout(runCallbacks, 66);
+          }
+        }
+
+      }
+
+      // run the actual callbacks
+      function runCallbacks() {
+
+        callbacks.forEach(function(callback) {
+          callback();
+        });
+
+        running = false;
+      }
+
+      // adds callback to loop
+      function addCallback(callback) {
+
+        if (callback) {
+          callbacks.push(callback);
+        }
+
+      }
+
+      return {
+        // public method to add additional callback
+        add: function(callback) {
+          if (!callbacks.length) {
+            window.addEventListener('resize', resize);
+          }
+          addCallback(callback);
+        }
+      }
+    }());
+
+    // start process
+    optimizedResize.add(function() {
+      if( container.childNodes.length > 0 ) {
+        enderSquiggl();
+      }
+    });
+
+  </script>
+</body>
+</html>
