@@ -7,14 +7,14 @@ Inspired by the podcast player by [Megaphone](https://megaphone.fm/).
 ## Installation
 
 Via `<script>` tag (example):
-```
+```html
 <script src="https://unpkg.com/squiggl/dist/index.js"></script>
 ```
 
 Via `npm i squiggl`:
-```
+```js
 const squiggl = require('squiggl');
-or
+// or
 import squiggl from 'squiggl';
 ```
 
