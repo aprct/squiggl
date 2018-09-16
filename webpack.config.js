@@ -6,7 +6,8 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'index.js',
-		library: 'squiggl'
+		library: 'squiggl',
+    libraryTarget: 'umd'
 	},
 	module: {
 		rules: [
