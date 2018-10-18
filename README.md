@@ -4,8 +4,10 @@ Inspired by the podcast player by [Megaphone](https://megaphone.fm/).
 
 ![Example waveform](./squiggl.png?raw=true "Example")
 
-## Demo
-[https://codepen.io/aprct/full/JaaRqX/](https://codepen.io/aprct/full/JaaRqX/)
+## Responsive Demo
+I decided to split the **squiggl** functionality into 3 parts (one async, two sync) so that the audio data can be read once, then re-formatted and re-rendered multiple times without too much I/O. This way, the waveform can be re-rendered in response to changing screen widths.
+
+[Check it out.](https://aprct.github.io/squiggl/)
 
 ## Installation
 
@@ -117,8 +119,3 @@ This function formats the audio data into a smaller set of numbers that models t
 | Returns |
 | --- |
 | An `<svg>` [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element) that is ready to be added to the DOM. |
-
-### Responsive Demo
-I decided to split the **squiggl** functionality into 3 parts (one async, two sync) so that the audio data can be read once, then re-formatted and re-rendered multiple times without too much I/O. This way, the waveform can be re-rendered in response to changing screen widths.
-
-See the `/demo` directory or [https://codepen.io/aprct/pen/JaaRqX](https://codepen.io/aprct/pen/JaaRqX) for usage that renders a *responsive* waveform.
