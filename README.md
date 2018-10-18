@@ -110,7 +110,7 @@ This function doesn't care where you get your audio data from (HTTP request, fil
 
 This function formats the audio data into a smaller set of numbers that models the number of squiggles in the waveform, and their magnitudes.
 
-#### formatVolumeData( volumeData, options )
+#### createElement( volumeData, options )
 | Parameter | Type | Description |
 | --- | --- | --- |
 | `volumeData` | Array of Numbers between 0.0 and 1.0 | Ideally generated from the formatVolumeData function. |
