@@ -1,6 +1,6 @@
 {
   "name": "squiggl",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A javascript library to create a squiggly SVG waveform from audio data.",
   "url": "https://github.com/aprct/squiggl",
   "homepage": "https://github.com/aprct/squiggl",
