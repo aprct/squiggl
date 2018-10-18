@@ -1,13 +1,13 @@
 {
-  "main.css": "/static/css/main.0759feed.chunk.css",
-  "main.js": "/static/js/main.425ae9be.chunk.js",
-  "main.js.map": "/static/js/main.425ae9be.chunk.js.map",
-  "static/js/1.64bbf5dc.chunk.js": "/static/js/1.64bbf5dc.chunk.js",
-  "static/js/1.64bbf5dc.chunk.js.map": "/static/js/1.64bbf5dc.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/css/main.0759feed.chunk.css.map": "/static/css/main.0759feed.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.a04666badaecd6f17abbbd27eb511a67.js": "/precache-manifest.a04666badaecd6f17abbbd27eb511a67.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/squiggl/static/css/main.0759feed.chunk.css",
+  "main.js": "/squiggl/static/js/main.0e9ea0f4.chunk.js",
+  "main.js.map": "/squiggl/static/js/main.0e9ea0f4.chunk.js.map",
+  "static/js/1.64bbf5dc.chunk.js": "/squiggl/static/js/1.64bbf5dc.chunk.js",
+  "static/js/1.64bbf5dc.chunk.js.map": "/squiggl/static/js/1.64bbf5dc.chunk.js.map",
+  "runtime~main.js": "/squiggl/static/js/runtime~main.27e44848.js",
+  "runtime~main.js.map": "/squiggl/static/js/runtime~main.27e44848.js.map",
+  "static/css/main.0759feed.chunk.css.map": "/squiggl/static/css/main.0759feed.chunk.css.map",
+  "index.html": "/squiggl/index.html",
+  "precache-manifest.fa79e7b8f1225a14eb95f99f215dc9e2.js": "/squiggl/precache-manifest.fa79e7b8f1225a14eb95f99f215dc9e2.js",
+  "service-worker.js": "/squiggl/service-worker.js"
 }
